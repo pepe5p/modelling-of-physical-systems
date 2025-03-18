@@ -1,0 +1,26 @@
+name: Generate pdf for changed notebooks
+run-name: ${{ github.actor }} triggered workflow ${{ github.workflow }} from branch ${{ github.ref }}
+on:
+  push:
+    paths:
+      - 'lab*/**.ipynb'
+
+jobs:
+  generate_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install nbconvert ipykernel scipy pint numpy matplotlib pandas open-atmos-jupyter-utils
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: pandoc inkscape texlive-xetex texlive-fonts-recommended
+          version: 1.0
+
+      - run: |
+          for file in $(find lab* -type f -name "*.ipynb"); do
+            python -m nbconvert --to pdf --execute "$file"
+          done
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: lab*/*.pdf
