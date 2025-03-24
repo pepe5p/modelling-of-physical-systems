@@ -19,8 +19,6 @@ jobs:
           packages: pandoc inkscape texlive-xetex texlive-fonts-recommended
           version: 1.0
 
-      - run: sudo fmtutil-sys --all  # Add this step to generate the required format files
-
       - run: |
           for file in $(find lab* -type f -name "*.ipynb"); do
             python -m nbconvert --to pdf --execute "$file"
