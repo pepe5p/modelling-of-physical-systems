@@ -10,11 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - run: pip install nbconvert ipykernel scipy pint numpy matplotlib pandas open-atmos-jupyter-utils
+
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: pandoc inkscape texlive-xetex texlive-fonts-recommended
           version: 1.0
+
+      - run: sudo fmtutil-sys --all  # Add this step to generate the required format files
 
       - run: |
           for file in $(find lab* -type f -name "*.ipynb"); do
