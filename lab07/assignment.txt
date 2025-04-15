@@ -7,3 +7,6 @@ with results obtained on multiple threads, and check match with analytic solutio
 - 33% for code quality (incl. conciseness)
 
 Submission: a Colab link allowing execution in the cloud.
+
+
+numba/jax
