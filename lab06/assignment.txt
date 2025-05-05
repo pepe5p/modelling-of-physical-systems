@@ -1,6 +1,6 @@
 Extend the Monte-Carlo advection solver to two spatial dimensions (e.g., a grid of 32x32 cells).
 Define a two-dimensional constant-in-time flow field (with both components not zero). 
-Define an 2D initial condition condition.
+Define an 2D initial condition.
 
 - 20% for implementing 2D advection
 - 20% for analysis of the result vs. analytic solution
