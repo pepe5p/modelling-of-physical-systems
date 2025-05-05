@@ -8,10 +8,10 @@ dependencies = [
     "jupyter>=1.1.1",
     "matplotlib>=3.10.1",
     "nbqa>=1.9.1",
-    "numpy>=2.2.4",
+    "numpy>=2.2.5",
     "open-atmos-jupyter-utils>=1.3.0",
     "pandas>=2.2.3",
     "pint>=0.24.4",
-    "pylint>=3.3.6",
+    "pylint>=3.3.7",
     "scipy>=1.15.2",
 ]
