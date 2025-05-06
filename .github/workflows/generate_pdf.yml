@@ -12,7 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: pip install nbconvert ipykernel scipy pint numpy matplotlib pandas open-atmos-jupyter-utils
+      - run: pip install uv
+
+      - run: uv sync --active
 
       - run: sudo apt-get update
 
