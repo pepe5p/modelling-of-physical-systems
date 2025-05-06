@@ -22,7 +22,7 @@ jobs:
 
       - run: |
           for file in $(find lab* -type f -name "*.ipynb"); do
-            uv tool run --from nbconvert --to pdf --execute "$file"
+            uv tool run --from nbconvert jupyter nbconvert --to pdf --execute "$file"
           done
 
       - uses: actions/upload-artifact@v4
