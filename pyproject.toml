@@ -5,8 +5,10 @@ description = "Modelling of Physical Systems laboratory classes."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "ipykernel>=6.29.5",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.1",
+    "nbconvert>=7.16.6",
     "nbqa>=1.9.1",
     "numba>=0.61.2",
     "numpy>=2.2.5",

@@ -956,8 +956,10 @@ name = "modelling-of-physical-systems"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "ipykernel" },
     { name = "jupyter" },
     { name = "matplotlib" },
+    { name = "nbconvert" },
     { name = "nbqa" },
     { name = "numba" },
     { name = "numpy" },
@@ -970,8 +972,10 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "matplotlib", specifier = ">=3.10.1" },
+    { name = "nbconvert", specifier = ">=7.16.6" },
     { name = "nbqa", specifier = ">=1.9.1" },
     { name = "numba", specifier = ">=0.61.2" },
     { name = "numpy", specifier = ">=2.2.5" },
